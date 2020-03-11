@@ -1,0 +1,43 @@
+<button mat-mini-fab *ngIf="!connected" class="lout"><label>Disconnected</label></button>
+<button mat-mini-fab *ngIf="connected" class="lin"><label>Connected</label></button>
+<audio id="audio_remote" autoplay="autoplay"></audio>
+<input placeholder="Введите номер" [(ngModel)]="CallingId">
+<p>
+<div class="numbers">
+    <div class="buttonRow1">
+        <button mat-raised-button (click)="onButton('1')">1</button>
+        <button mat-raised-button (click)="onButton('2')">2</button>
+        <button mat-raised-button (click)="onButton('3')">3</button>
+    </div>
+    <div class="buttonRow2">
+        <button mat-raised-button (click)="onButton('4')">4</button>
+        <button mat-raised-button (click)="onButton('5')">5</button>
+        <button mat-raised-button (click)="onButton('6')">6</button>
+    </div>
+    <div class="buttonRow3">
+        <button mat-raised-button (click)="onButton('7')">7</button>
+        <button mat-raised-button (click)="onButton('8')">8</button>
+        <button mat-raised-button (click)="onButton('9')">9</button>
+    </div>
+    <div class="buttonRow4">
+        <button mat-raised-button (click)="onButton('*')">*</button>
+        <button mat-raised-button (click)="onButton('0')">0</button>
+        <button mat-raised-button (click)="onButton('#')">#</button>
+    </div>
+</div>
+<div class="action-buttons">
+    <button id="call" mat-raised-button color="primary" (click)=onCallButton()>Позвонить</button>
+    <button id="reject" mat-raised-button color="warn" (click)="onClearButton()">Сброс</button>
+</div>
+<div class="call-event" *ngIf="incomingCallEvent">
+    <p>
+        Входящий звонок 
+    </p>
+    <p>
+        с номера <span>{{CallerId}}</span>
+    </p>
+    <div class="incoming-action-buttons">
+        <button id="call" mat-raised-button color="primary" (click)=onAcceptCallButton()>Приянть</button>
+        <button id="reject" mat-raised-button color="warn" (click)="onDeclineButton()">Отклонить</button>
+    </div>
+</div>

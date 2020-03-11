@@ -1,0 +1,88 @@
+// ::ng-deep .mat-form-field-infix {
+//     background-color: white;
+//     margin: 0 5px 0 5px;
+// }
+// ::ng-deep .mat-form-field-underline {
+//     display: none;
+// }
+// ::ng-deep .mat-form-field-label {
+//     padding-left: 10px;
+// }
+input {
+    padding-left: 10px;
+    width: 93%;
+    height: 30px;
+    border: none;
+    margin-left: 8px;
+}
+button {
+    width: 120px;
+    margin: 2px 2px 2px 2px;
+}
+.buttonRow1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonRow2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonRow3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonRow4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.action-buttons {
+    margin: 10px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.incoming-action-buttons {
+    margin: 10px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#call, #reject {
+    width: 150px;
+    height: 3em;
+}
+
+.call-event {
+    text-align: center;
+    font-size: 1.4em;
+}
+span {
+    color: #3f51b5;
+}
+.lin {
+    width: 20px;
+    height: 20px;
+    background-color: #00c853;
+    margin: 10px 0px 10px 10px;
+    
+}
+
+.lout {
+    width: 20px;
+    height: 20px;
+    background-color: #ff1744;
+    margin: 10px 0px 10px 10px;
+}
+label {
+    font-size: 13px;
+    font-weight: normal;
+    color: black;
+    position: absolute;
+    margin: -16px 0px 0px 14px;
+}
