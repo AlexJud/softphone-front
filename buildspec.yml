@@ -9,7 +9,7 @@ phases:
       - echo Building project $CODEBUILD_BUILD_NUMBER
       - npm install
       - node --max-old-space-size=4096 ./node_modules/@angular/cli/bin/ng build
-      - tar -czvf sph-ui-%env.$CODEBUILD_BUILD_NUMBER.tar.gz -C dist/ .
+      - tar -czvf sph-ui-%env.$CODEBUILD_BUILD_NUMBER.tar.gz -C dist/softphone/ .
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
   build:
